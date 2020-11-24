@@ -26,11 +26,11 @@ class ArticleController extends AbstractController{
      */
 
     public function articleShow($id, ArticleRepository $articleRepository){
-        $result2 = $articleRepository->find($id);
+        $result4article = $articleRepository->find($id);
 
         return $this->render('article.html.twig',
         [
-            'result2'=>$result2
+            'result4article'=>$result4article
         ]);
     }
 }
