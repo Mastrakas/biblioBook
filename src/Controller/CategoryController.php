@@ -14,6 +14,10 @@ class CategoryController extends AbstractController{
 
     public function categorylist(CategoryRepository $categoryRepository){
         $result = $categoryRepository->findAll();
-        dump($result); die;
+
+        return $this->render('listcategory.html.twig',
+            [
+                'result'=>$result
+            ]);
     }
 }

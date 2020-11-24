@@ -14,6 +14,10 @@ class ArticleController extends AbstractController{
 
     public function articlelist(ArticleRepository $articleRepository){
         $result = $articleRepository->findAll();
-        dump($result); die;
+
+        return $this->render('listarticle.html.twig',
+        [
+            'result'=>$result
+        ]);
     }
 }
