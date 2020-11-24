@@ -20,4 +20,17 @@ class ArticleController extends AbstractController{
             'result'=>$result
         ]);
     }
+
+    /**
+     * @Route ("/article/{id}", name="article_show")
+     */
+
+    public function articleShow($id, ArticleRepository $articleRepository){
+        $result2 = $articleRepository->find($id);
+
+        return $this->render('article.html.twig',
+        [
+            'result2'=>$result2
+        ]);
+    }
 }
