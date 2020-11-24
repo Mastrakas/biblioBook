@@ -26,11 +26,11 @@ class CategoryController extends AbstractController{
      */
 
     public function categoryShow($id, CategoryRepository $categoryRepository){
-        $result2 = $categoryRepository->find($id);
+        $result4category = $categoryRepository->find($id);
 
         return $this->render('category.html.twig',
             [
-                'result2'=>$result2
+                'result4category'=>$result4category
             ]);
     }
 }
