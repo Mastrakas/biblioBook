@@ -20,4 +20,17 @@ class CategoryController extends AbstractController{
                 'result'=>$result
             ]);
     }
+
+    /**
+     * @Route ("/category/{id}", name="category_show")
+     */
+
+    public function categoryShow($id, CategoryRepository $categoryRepository){
+        $result2 = $categoryRepository->find($id);
+
+        return $this->render('category.html.twig',
+            [
+                'result2'=>$result2
+            ]);
+    }
 }

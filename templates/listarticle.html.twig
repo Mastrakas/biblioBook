@@ -10,7 +10,7 @@
 <body>
     <ul>
         {% for article in result %}
-            <li>{{ article.title }}<br>{{ article.content }} - {{ article.datepublication|date("m/d/Y") }}</li><br>
+            <a href="{{ path('article_show', {'id':article.id}) }}"><li>{{ article.title }}<br>{{ article.content }} - {{ article.datepublication|date("m/d/Y") }}</li></a><br>
         {% endfor %}
     </ul>
 </body>

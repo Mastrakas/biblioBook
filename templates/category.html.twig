@@ -5,13 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Liste des catégories</title>
+    <title>Liste des articles</title>
 </head>
 <body>
-<ul>
-    {% for category in result %}
-    <a href="{{ path('category_show', {'id':category.id}) }}"><li>{{ category.title }} - {{ category.color }}</li><br>
-    {% endfor %}
-</ul>
+{{ result2.title }} - {{ result2.id }}
+<br>
+<hr>
+<br>
+{{ result2.color }}
 </body>
 </html>
