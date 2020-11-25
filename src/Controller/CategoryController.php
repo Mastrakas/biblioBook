@@ -2,9 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
 use App\Repository\CategoryRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Doctrine\ORM\EntityManagerInterface;
 
 class CategoryController extends AbstractController{
 
@@ -22,7 +24,7 @@ class CategoryController extends AbstractController{
     }
 
     /**
-     * @Route ("/category/{id}", name="category_show")
+     * @Route ("/category/show/{id}", name="category_show")
      */
 
     public function categoryShow($id, CategoryRepository $categoryRepository){
@@ -32,5 +34,24 @@ class CategoryController extends AbstractController{
             [
                 'result4category'=>$result4category
             ]);
+    }
+
+    /**
+     * @Route ("/category/insert-static", name="category_insert_static")
+     */
+
+    public function insertStaticCategory (EntityManagerInterface $entitymanager) {
+        $category = new Category();
+
+        $category->setTitle('Titre de mon article');
+        $category->setColor('couleur de mon article');
+        $category->setDatecreation(new \DateTime(2020-12-31));
+        $category->setDatepublication(new \DateTime(2020-12-31));
+        $category->setPublished(true);
+
+        $entitymanager->persist($category);
+        $entitymanager->flush();
+
+        return $this->render('category_insert_static.html.twig');
     }
 }

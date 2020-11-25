@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25619c9b-c498-4df0-8986-b4d084c78bfa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/article_insert_static.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/category_insert_static.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +184,8 @@
       <workItem from="1606144223668" duration="1681000" />
       <workItem from="1606207931861" duration="2231000" />
       <workItem from="1606212926541" duration="1113000" />
-      <workItem from="1606221786185" duration="3587000" />
+      <workItem from="1606221786185" duration="4052000" />
+      <workItem from="1606294480261" duration="2959000" />
     </task>
     <servers />
   </component>
@@ -206,10 +209,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="184" y="109" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1606145561101" />
-    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606224173633">
+    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606297275095">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1606224173633" />
+    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1606297275095" />
     <state x="596" y="351" key="Github.ShareDialog" timestamp="1606146298158">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
