@@ -10,7 +10,8 @@
 <body>
     <ul>
         {% for article in result %}
-            <a href="{{ path('article_update_static', {'id':article.id}) }}"><li>{{ article.title }}<br>{{ article.content }} - {{ article.datepublication|date("m/d/Y") }}</li></a><br>
+            <a href="{{ path('article_update_static', {'id':article.id}) }}"><li>{{ article.title }}<br>{{ article.content }} - {{ article.datepublication|date("m/d/Y") }}</li></a>
+            <a href="{{ path('delete_article', {'id':article.id}) }}">Supprimer l'article ici</a><br><br>
         {% endfor %}
     </ul>
 </body>
