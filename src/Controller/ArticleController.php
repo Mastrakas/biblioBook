@@ -56,4 +56,18 @@ class ArticleController extends AbstractController{
 
         return $this->render('article_insert_static.html.twig');
     }
+
+    /**
+     *@Route ("/article/update-static/{id}", name="article_update_static")
+     */
+
+    public function updateStaticArticle ($id, EntityManagerInterface $entitymanager, ArticleRepository $articleRepository) {
+        $article = $articleRepository->find($id);
+        $article->setTitle("ça c'est le bon titre !");
+
+        $entitymanager->persist($article);
+        $entitymanager->flush();
+
+        return $this->render('article_update_static.html.twig');
+    }
 }

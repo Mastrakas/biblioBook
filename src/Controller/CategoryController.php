@@ -52,6 +52,9 @@ class CategoryController extends AbstractController{
         $entitymanager->persist($category);
         $entitymanager->flush();
 
-        return $this->render('category_insert_static.html.twig');
+        return $this->render('category_insert_static.html.twig',
+        [
+            'category'=>$category
+        ]);
     }
 }
