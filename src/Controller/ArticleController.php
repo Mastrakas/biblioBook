@@ -50,9 +50,10 @@ class ArticleController extends AbstractController{
         //je stocke dans une variable le gabarit qui est dans ArticleType en utilisant la fonction createForm
         $form = $this->createForm(ArticleType::class, $article);
 
+        //relie les données du formulaire "$_POST" dans la variable request, à la variable $form
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() & $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($article);
             $entityManager->flush();
         }
