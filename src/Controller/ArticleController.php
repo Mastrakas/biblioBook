@@ -89,6 +89,14 @@ class ArticleController extends AbstractController{
     }*/
 
     /**
+     * @Route ("/article/update/{id}", name="update_article")
+     */
+
+    public function updateArticle () {
+
+    }
+
+    /**
      *@Route ("/article/update-static/{id}", name="article_update_static")
      */
 
