@@ -47,7 +47,7 @@ class ArticleController extends AbstractController{
     public function insertArticle (Request $request, EntityManagerInterface $entityManager) {
 
         $article = new Article();
-        //je stocke dans une variable la standard qui est dans ArticleType en utilisant la fonction createForm
+        //je stocke dans une variable le gabarit qui est dans ArticleType en utilisant la fonction createForm
         $form = $this->createForm(ArticleType::class, $article);
 
         $form->handleRequest($request);
@@ -56,7 +56,7 @@ class ArticleController extends AbstractController{
             $entityManager->persist($article);
             $entityManager->flush();
         }
-        //j'utilise la fonction createView pour que le standard soit lisible par twig
+        //j'utilise la fonction createView pour que le gabarit soit lisible par twig
         $formView = $form->createView();
 
         //je retourne sur un fichier twig, le formulaire lisible
