@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Article;
+use App\Form\ArticleType;
 use App\Repository\ArticleRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -38,10 +39,30 @@ class ArticleController extends AbstractController{
     }
 
     /**
+     * @Route ("/article/insert", name="article_insert")
+     */
+    //j'ai créé un gabarit standard de formulaire via le terminal, il s'est créé dans Form.
+    //je mets en plac une fonction qui a pour objectif d'ajouter un article en utilisant le standard.
+    public function insertArticle () {
+
+        //je stocke dans une variable la standard qui est dans ArticleType en utilisant la fonction createForm
+        $form = $this->createForm(ArticleType::class);
+
+        //j'utilise la fonction createView pour que le standard soit lisible par twig
+        $formView = $form->createView();
+
+        //je retourne sur un fichier twig, le formulaire lisible
+        return $this->render("article_insert.html.twig",
+        [
+            'formView' => $formView
+        ]);
+    }
+
+    /**
      * @Route ("/article/insert-static", name="article_insert_static")
      */
 
-    public function insertStaticArticle (EntityManagerInterface $entitymanager) {
+    /*public function insertStaticArticle (EntityManagerInterface $entitymanager) {
         $article = new Article();
 
         $article->setTitle('Titre de mon article');
@@ -55,13 +76,13 @@ class ArticleController extends AbstractController{
         $entitymanager->flush();
 
         return $this->render('article_insert_static.html.twig');
-    }
+    }*/
 
     /**
      *@Route ("/article/update-static/{id}", name="article_update_static")
      */
 
-    public function updateStaticArticle ($id, EntityManagerInterface $entitymanager, ArticleRepository $articleRepository) {
+    /*public function updateStaticArticle ($id, EntityManagerInterface $entitymanager, ArticleRepository $articleRepository) {
         $article = $articleRepository->find($id);
         $article->setTitle("ça c'est le bon titre !");
 
@@ -69,7 +90,7 @@ class ArticleController extends AbstractController{
         $entitymanager->flush();
 
         return $this->render('article_update_static.html.twig');
-    }
+    }*/
 
     /**
      * @Route ("/article/delete/{id}", name="delete_article")
