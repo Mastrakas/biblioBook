@@ -42,7 +42,7 @@ class ArticleController extends AbstractController{
      * @Route ("/article/insert", name="article_insert")
      */
     //j'ai créé un gabarit standard de formulaire via le terminal, il s'est créé dans Form.
-    //je mets en plac une fonction qui a pour objectif d'ajouter un article en utilisant le standard.
+    //je mets en plac une fonction qui a pour objectif de créer un formulaire en utilisant le gabarit.
     public function insertArticle () {
 
         //je stocke dans une variable la standard qui est dans ArticleType en utilisant la fonction createForm
