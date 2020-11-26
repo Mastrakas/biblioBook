@@ -8,6 +8,7 @@ use App\Repository\ArticleRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ArticleController extends AbstractController{
@@ -43,11 +44,18 @@ class ArticleController extends AbstractController{
      */
     //j'ai créé un gabarit standard de formulaire via le terminal, il s'est créé dans Form.
     //je mets en plac une fonction qui a pour objectif de créer un formulaire en utilisant le gabarit.
-    public function insertArticle () {
+    public function insertArticle (Request $request, EntityManagerInterface $entityManager) {
 
+        $article = new Article();
         //je stocke dans une variable la standard qui est dans ArticleType en utilisant la fonction createForm
-        $form = $this->createForm(ArticleType::class);
+        $form = $this->createForm(ArticleType::class, $article);
 
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() & $form->isValid()) {
+            $entityManager->persist($article);
+            $entityManager->flush();
+        }
         //j'utilise la fonction createView pour que le standard soit lisible par twig
         $formView = $form->createView();
 
