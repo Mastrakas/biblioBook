@@ -54,6 +54,7 @@ class ArticleController extends AbstractController{
         //je retourne sur un fichier twig, le formulaire lisible
         return $this->render("article_insert.html.twig",
         [
+            //je transmets au fichier twig une version lisible de ma variable formView
             'formView' => $formView
         ]);
     }
