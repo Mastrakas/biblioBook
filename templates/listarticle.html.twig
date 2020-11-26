@@ -8,6 +8,11 @@
     <title>Liste des articles</title>
 </head>
 <body>
+    <header>
+        {% for message in app.flashes('success') %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </header>
     <ul>
         {% for article in result %}
             <a href="{{ path('article_update_static', {'id':article.id}) }}"><li>{{ article.title }}<br>{{ article.content }} - {{ article.datepublication|date("m/d/Y") }}</li></a>

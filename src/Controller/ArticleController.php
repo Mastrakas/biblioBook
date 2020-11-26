@@ -80,8 +80,13 @@ class ArticleController extends AbstractController{
         if (!is_null($article)) {
             $entitymanager->remove($article);
             $entitymanager->flush();
+
+            $this->addFlash(
+                'success',
+                "l'article a bien été supprimé"
+            );
         }
 
-        return $this->render('article_delete.html.twig');
+        return $this->redirectToRoute('article_list');
     }
 }
