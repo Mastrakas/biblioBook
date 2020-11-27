@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.liste{
+    list-style-type: none;
+    padding: 0;
+    margin: 0 10%;
+
+}
+.lienarticle{
+    text-decoration: none;
+    color: black;
+}
+.lien{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+}
+.lien:hover{
+    background-color: red;
+    color: white;
+}
+.article{
+    width: 50%;
+    float: left;
+    text-align: center;
+    height: 20vh;
+}
+.titre{
+    text-align: center;
+}

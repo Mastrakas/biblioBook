@@ -19,9 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25619c9b-c498-4df0-8986-b4d084c78bfa" name="Default Changelist" comment="create form">
+    <list default="true" id="25619c9b-c498-4df0-8986-b4d084c78bfa" name="Default Changelist" comment="form">
+      <change afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AdminArticleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/article_update_static.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article_update_static.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/listarticle.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listarticle.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +40,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -160,6 +164,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -189,7 +194,8 @@
       <workItem from="1606221786185" duration="4052000" />
       <workItem from="1606294480261" duration="8635000" />
       <workItem from="1606380518786" duration="1721000" />
-      <workItem from="1606387704643" duration="6608000" />
+      <workItem from="1606387704643" duration="6820000" />
+      <workItem from="1606466766470" duration="8161000" />
     </task>
     <task id="LOCAL-00001" summary="ajout submit">
       <created>1606398212930</created>
@@ -212,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606405686971</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="form">
+      <created>1606408056549</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606408056549</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +247,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="ajout submit" />
     <MESSAGE value="create form" />
-    <option name="LAST_COMMIT_MESSAGE" value="create form" />
+    <MESSAGE value="form" />
+    <option name="LAST_COMMIT_MESSAGE" value="form" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="109" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606145561101">
@@ -249,18 +263,18 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="596" y="351" key="Github.ShareDialog/0.0.1440.900@0.0.1440.900" timestamp="1606146298158" />
-    <state x="541" y="377" key="NewPhpFileDialog" timestamp="1606212088231">
+    <state x="541" y="377" key="NewPhpFileDialog" timestamp="1606467293844">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="541" y="377" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1606212088231" />
+    <state x="541" y="377" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1606467293844" />
     <state x="229" y="86" key="SettingsEditor" timestamp="1606405673554">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1606405673554" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1606405691897">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1606408061961">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1606405691897" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1606408061961" />
     <state x="526" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606146350313">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

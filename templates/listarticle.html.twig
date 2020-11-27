@@ -5,19 +5,24 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
+
     <title>Liste des articles</title>
 </head>
 <body>
     <header>
+        <H1 class="titre">Liste des articles</H1>
         {% for message in app.flashes('success') %}
             <p>{{ message }}</p>
         {% endfor %}
     </header>
-    <ul>
+    <ul class="liste">
         {% for article in result %}
-            <a href="{{ path('article_show', {'id':article.id}) }}"><li>{{ article.title }}<br>{{ article.content }} - {{ article.datepublication|date("m/d/Y") }}</li></a>
-            <a href="{{ path('delete_article', {'id':article.id}) }}">Supprimer l'article ici</a><br>
-            <a href="{{ path('update_article', {'id':article.id}) }}">Modifier l'article ici</a><br><br>
+            <div class="article">
+            <a href="{{ path('article_show', {'id':article.id}) }}" class="lienarticle"><li>{{ article.title }}<br>{{ article.content }} - {{ article.datepublication|date("m/d/Y") }}</li></a>
+            <a href="{{ path('admin_delete_article', {'id':article.id}) }}" class="lien">Supprimer l'article ici</a><br>
+            <a href="{{ path('admin_update_article', {'id':article.id}) }}" class="lien">Modifier l'article ici</a>
+            </div>
         {% endfor %}
     </ul>
 </body>
