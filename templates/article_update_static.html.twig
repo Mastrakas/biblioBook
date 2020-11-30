@@ -8,6 +8,41 @@
     <title>Document</title>
 </head>
 <body>
-    {{ form(formView) }}
+{{ form_start(formView) }}
+
+<div>
+    {{ form_label(formView.title) }}
+    {{ form_widget(formView.title) }}
+</div>
+
+<div>
+    {{ form_label(formView.content) }}
+    {{ form_widget(formView.content) }}
+</div>
+
+<div>
+    {{ form_label(formView.image) }}
+    {{ form_widget(formView.image) }}
+</div>
+
+<div>
+    {{ form_label(formView.datepublication) }}
+    {{ form_widget(formView.datepublication) }}
+</div>
+
+<div>
+    {{ form_label(formView.datecreation) }}
+    {{ form_widget(formView.datecreation) }}
+</div>
+
+<div>
+    {{ form_label(formView.isPublished) }}
+    {{ form_widget(formView.isPublished) }}
+</div>
+
+<div>
+    {{ form_widget(formView.sauver) }}
+</div>
+{{ form_end(formView) }}
 </body>
 </html>

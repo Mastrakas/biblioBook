@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\ArticleRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
@@ -19,21 +21,47 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     *  @Assert\NotBlank(
+     *     message="Veuillez remplir le titre"
+     * )
+     *
+     * @Assert\Regex(
+     *     pattern="/\s{2,}/",
+     *     match=false,
+     *     message="Ceci n'est pas un titre correct"
+     * )
      */
     private $title;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     *
+     * @Assert\NotBlank(
+     *     message="Veuillez remplir le contenu"
+     * )
+     *
+     * @Assert\Regex(
+     *     pattern="/\s{2,}/",
+     *     match=false,
+     *     message="Ceci n'est pas un titre correct"
+     * )
      */
     private $content;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     *
+     * @Assert\File(
+     *     mimeTypes={"image/png", "image/jpg", "image/jpeg"},
+     *     mimeTypesMessage="Le type d'image ne correspond pas"
+     * )
      */
     private $image;
 
     /**
      * @ORM\Column(type="date")
+     *
      */
     private $datepublication;
 
@@ -46,6 +74,11 @@ class Article
      * @ORM\Column(type="date")
      */
     private $datecreation;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="articles")
+     */
+    private $category;
 
     public function getId(): ?int
     {
@@ -120,6 +153,18 @@ class Article
     public function setDatecreation(\DateTimeInterface $datecreation): self
     {
         $this->datecreation = $datecreation;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }

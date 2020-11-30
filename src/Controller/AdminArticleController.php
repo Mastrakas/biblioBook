@@ -43,6 +43,10 @@ class AdminArticleController extends AbstractController{
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($article);
             $entityManager->flush();
+
+            $this->addFlash('success', 'article ajouté');
+
+            return $this->redirectToRoute('admin_article_list');
         }
         //j'utilise la fonction createView pour que le gabarit soit lisible par twig
         $formView = $form->createView();

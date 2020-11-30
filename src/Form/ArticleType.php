@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Article;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -16,9 +17,9 @@ class ArticleType extends AbstractType
             ->add('title')
             ->add('content')
             ->add('image')
-            ->add('datepublication')
+            ->add('datepublication', DateType::class, ['widget' => 'single_text'])
             ->add('published')
-            ->add('datecreation')
+            ->add('datecreation', DateType::class, ['widget' => 'single_text'])
             ->add('valider', SubmitType::class)
         ;
     }
