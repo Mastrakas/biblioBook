@@ -44,6 +44,12 @@
         </div>
 
         <div class="row m-2">
+            <div class="col-6 text-right">{{ form_label(formView.category) }}</div>
+            <div class="col-6 text-left">{{ form_widget(formView.category) }}</div>
+            {{ form_errors(formView.category) }}
+        </div>
+
+        <div class="row m-2">
             <div class="col-6 text-right">{{ form_label(formView.published) }}</div>
             <div class="col-6 text-left">{{ form_widget(formView.published) }}</div>
             {{ form_errors(formView.published) }}
